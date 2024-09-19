@@ -12,6 +12,11 @@ section {
     align-items: center;
     justify-content: center;
 }
+.company {
+    padding-top: 0.5rem;
+    font-weight: 600;
+    color: white;
+}
 
 section::before {
     content: "";
@@ -20,6 +25,7 @@ section::before {
     width: 240px;
     border-radius: 50%;
     transform: translate(-150px, -100px);
+
 }
 
 section::after {
@@ -33,17 +39,18 @@ section::after {
 
 .container {
     position: relative;
-    height: 225px;
+    height: 230px;
     width: 375px;
     z-index: 100;
     transition: 0.6s;
     transform-style: preserve-3d;
+    border-radius: 50%;
+    padding-bottom: 20px;
 }
 
 .container:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);   
 }
-
 .container .card {
     position: absolute;
     height: 100%;
@@ -54,10 +61,11 @@ section::after {
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backface-visibility: hidden;
+    background-color: pink;
 }
-
-.card-front {
-    z-index: 2;
+.chip {
+    width: 20%;
+    height: 20%;
 }
 
 .card-back {
@@ -70,18 +78,96 @@ h5 {
     font-size: 16px;
     font-weight: 400;
 }
-
+.card-number {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+}
+.date {
+    display: flex;
+    align-items: row;
+}
+.dates {
+    padding-right: 20px;
+    color: white;
+}
+h4 {
+    font-size: 20px;
+    color: white;
+}
 .card-numbers {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .card-back .back-info {
     margin-bottom: 10px;
+    padding: 0;
 }
 
 .card-back .terms {
     font-size: 10px;
     line-height: 1.4;
     text-align: left;
+}
+.owners-name {
+    color: white;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.black {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+.back-info {
+    position: relative; 
+    margin-top: 60px; 
+    padding: 10px;
+}
+.info { 
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.ccv-box { 
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+    right: 0;
+    height: 36px;
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #000;
+    background: white;
+}
+.ccv-number { 
+    text-align: right;
+    padding-top: 4px;
+    padding-right: 5px;
+}
+p {
+    color: white;
+    font-size: 12px;
+    position: relative; 
+    margin-top: 25px; 
+    padding-top: 15px;
+}
+.ccv {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+.ccv-text {
+    font-size: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
 }
